@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+
+{% block contenido %}
+    <h1>Editar Auto {{ carro.id }} </h1>
+
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ formulario.as_p }}
+        <input type="submit" value="guardar cambios">
+    </form>
+{% endblock contenido %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+    <h1>Lista de {{ vista }}s</h1>
+
+    <a href="{% url 'agregar_auto' %}"> Agregar nuevo {{ vista}} </a>
+
+    {% for object in lista %}
+    <p>
+        {{ object.id }}
+        {{ object.nombre }}
+        <a href="{% url 'detalle_marca' id_marca=object.id %}">ver detalle</a>
+        <a href="{% url 'editar_marca' id_marca=object.id %}">editar</a>
+        <a href="{% url 'eliminar_marca' id_marca=object.id %}">eliminar</a>
+    </p>
+
+    {% endfor %}
+{% endblock contenido %}

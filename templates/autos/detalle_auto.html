@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+    <h1>Ver detalle del Auto</h1>
+
+    <img src="/media/{{ carro.foto }}" alt="" height="30%">
+
+    <p>
+        {{ carro.cilindraje }}
+    </p>
+
+    <p>
+        {{ carro.puertas }}
+    </p>
+    <strong>
+        {{ carro.marca }}
+    </strong>
+{% endblock contenido %}
+    
